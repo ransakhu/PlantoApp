@@ -43,7 +43,7 @@ final class NotificationManager {
     func scheduleDailyWaterNotification(for reminder: PlantReminder, atHour hour: Int, minute: Int) {
         let id = reminder.id.uuidString
         let content = makeContent(for: reminder)
-        let trigger = makeTrigger(hour: hour, minute: minute, repeats: true)
+        let trigger = makeTrigger(hour: hour, minute: minute, repeats: false)
 
         let request = UNNotificationRequest(
             identifier: id,
